@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>wasm-call-js-from-rust</title>
+</head>
+<body>
+
+<script>
+window.Module = {};
+
+fetch("wasm-call-js-from-rust.wasm")
+  .then(response => response.arrayBuffer())
+  .then(bytes => {
+    Module.wasmBinary = bytes;
+
+    let script = document.createElement('script');
+    script.src = "wasm-call-js-from-rust.js";
+    document.body.appendChild(script);
+  });
+</script>
+
+</body>
+</html>
