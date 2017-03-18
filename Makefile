@@ -1,6 +1,9 @@
 PKG := wasm-call-js-from-rust
 PKG_ := wasm_call_js_from_rust
 
+# The garbage in this file is just to copy the build results into a
+# deployable output directory (out/debug or out/release).
+
 debug:
 	cargo build
 	mkdir -p out/debug

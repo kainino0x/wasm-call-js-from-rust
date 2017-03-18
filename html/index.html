@@ -7,6 +7,13 @@
 <body>
 
 <script>
+// *ARCANE INCANTATION ALERT*
+// This file is actually pretty boring. But it does provide the minimum
+// necessary code to load the WebAssembly module and associated JS file, which
+// isn't that easy to figure out.
+// (Note that since the project is a binary, Rust's `main` will be called when
+// wasm-call-js-from-rust.js is loaded.)
+
 window.Module = {};
 
 fetch("wasm-call-js-from-rust.wasm")
