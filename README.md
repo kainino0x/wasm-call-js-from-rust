@@ -11,7 +11,7 @@ lines of arcane incantations in various languages, it's super easy!
 
 ### Building
 
-Requires Rust Nightly. Only tested on Linux.
+Requires Rust and Emscripten (obviously). Only tested on Linux.
 
 ```sh
 make

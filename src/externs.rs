@@ -18,13 +18,6 @@ pub fn eval(x: &str) -> i32 {
 mod ffi {
     use libc::*;
 
-    // *ARCANE INCANTATION ALERT*
-    // These arguments get passed to emcc (the Emscripten linker).
-    // This tells the linker that these external symbols are not undefined.
-    // (This is also why this project requires Rust Nightly. On stable, it
-    // should be possible pass this directly to the linker instead, but I
-    // think that means we can't use Cargo.)
-    #[link_args = "--js-library html/library.js"]
     extern "C" {
         // This extern is defined in `html/library.js`.
         pub fn alert(x: *const c_char);

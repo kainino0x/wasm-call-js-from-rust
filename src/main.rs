@@ -1,5 +1,3 @@
-#![feature(link_args)]
-
 extern crate libc;
 
 mod externs;
